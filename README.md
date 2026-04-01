@@ -96,6 +96,7 @@ To evaluate clustering performance, the following metrics were used:
 
 ## 🧪 Project Structure
 
+```bash
 kumeleme-doktora-kmeans/
 │
 ├── data/
@@ -114,13 +115,12 @@ kumeleme-doktora-kmeans/
 │   │   ├── agnes_dataset2.py
 │   │   └── agnes_dataset3.py
 │   │
-│   ├── kmedoids/
-│   │   ├── kmedoids_dataset1.py
-│   │   ├── kmedoids_dataset2.py
-│   │   └── kmedoids_dataset3.py
+│   └── kmedoids/
+│       ├── kmedoids_dataset1.py
+│       ├── kmedoids_dataset2.py
+│       └── kmedoids_dataset3.py
 │
 └── README.md
-
 ---
 
 ## 🚀 Installation
