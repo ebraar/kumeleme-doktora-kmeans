@@ -121,6 +121,8 @@ kumeleme-doktora-kmeans/
 │       └── kmedoids_dataset3.py
 │
 └── README.md
+```
+
 ---
 
 ## 🚀 Installation
