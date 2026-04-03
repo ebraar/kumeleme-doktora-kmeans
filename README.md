@@ -6,7 +6,7 @@ This project focuses on **customer segmentation** using three different clusteri
 
 - **K-Means**
 - **AGNES (Hierarchical Clustering)**
-- **K-Medoids**
+- **OPTICS (Density-Based Clustering)**
 
 The goal is to analyze different datasets and identify meaningful customer groups based on behavioral and numerical features.
 
@@ -56,10 +56,11 @@ The project includes three different datasets:
 - Uses dendrogram for cluster visualization  
 - Reveals hierarchical structure of data  
 
-### 🔹 K-Medoids
-- Similar to K-Means but uses real data points as centers  
-- More robust to outliers  
-- Provides interpretable cluster representatives (medoids)  
+### 🔹 OPTICS (Density-Based Clustering)
+- Density-based clustering algorithm  
+- Does not require a predefined K value 
+- Can automatically detect: clusters and noise(outliers)  
+- Works well for datasets with irregular shapes and density variations.
 
 ---
 
@@ -72,18 +73,20 @@ To evaluate clustering performance, the following metrics were used:
 
 ---
 
-## 🔍 Key Insights
+## 📌 Algorithm Comparison
 
-- Different algorithms can produce different cluster structures on the same dataset  
-- K-Means works well for balanced datasets but is sensitive to outliers  
-- AGNES reveals hierarchical relationships and can detect natural cluster counts  
-- K-Medoids performs better on datasets with **outliers** and provides more stable clusters  
+### 🔹 K-Means
+- Performs well on balanced datasets  
+- Struggles with outliers  
 
-### 📌 Example Insight (Dataset 3):
-- Customers were grouped into:
-  - Fresh-product focused buyers  
-  - Grocery & detergent-heavy buyers  
-  - Low-volume customers  
+### 🔹 AGNES (Hierarchical Clustering)
+- Reveals hierarchical relationships  
+- Helps understand natural cluster formation  
+
+### 🔹 OPTICS (Density-Based Clustering)
+- Automatically detects cluster structures  
+- Identifies noise (outliers)  
+- May fail when data lacks clear density differences   
 
 ---
 
@@ -91,6 +94,7 @@ To evaluate clustering performance, the following metrics were used:
 
 - PCA (Principal Component Analysis) was used to reduce dimensionality  
 - Clusters were visualized in 2D space for better interpretation  
+- Reachability plots were used for OPTICS analysis
 
 ---
 
@@ -104,21 +108,37 @@ kumeleme-doktora-kmeans/
 │   ├── dataset2.csv
 │   └── dataset3.csv
 │
-├── src/
-│   ├── kmeans/
-│   │   ├── kmeans_dataset1.py
-│   │   ├── kmeans_dataset2.py
-│   │   └── kmeans_dataset3.py
+├── results/
+│   ├── agnes/
+│   │   ├── dataset1/
+│   │   ├── dataset2/
+│   │   └── dataset3/
 │   │
+│   ├── kmeans/
+│   │   ├── dataset1/
+│   │   ├── dataset2/
+│   │   └── dataset3/
+│   │
+│   └── optics/
+│       ├── dataset1/
+│       ├── dataset2/
+│       └── dataset3/
+│
+├── src/
 │   ├── agnes/
 │   │   ├── agnes_dataset1.py
 │   │   ├── agnes_dataset2.py
 │   │   └── agnes_dataset3.py
 │   │
-│   └── kmedoids/
-│       ├── kmedoids_dataset1.py
-│       ├── kmedoids_dataset2.py
-│       └── kmedoids_dataset3.py
+│   ├── kmeans/
+│   │   ├── kmeans_dataset1.py
+│   │   ├── kmeans_dataset2.py
+│   │   └── kmeans_dataset3.py
+│   │
+│   └── optics/
+│       ├── optics_dataset1.py
+│       ├── optics_dataset2.py
+│       └── optics_dataset3.py
 │
 └── README.md
 ```
@@ -131,5 +151,5 @@ kumeleme-doktora-kmeans/
 pip install pandas numpy matplotlib scikit-learn scikit-learn-extra
 
 cd src 
-cd kmeans/agnes/kmedoids
-python kmeans_dataset1.py/agnes_dataset1.py/kmedoids_dataset1.py
+cd kmeans/agnes/optics
+python kmeans_dataset1.py/agnes_dataset1.py/optics_dataset1.py
