@@ -8,7 +8,7 @@ from sklearn.decomposition import PCA
 
 
 # 1. VERIYI YUKLE
-df = pd.read_csv("../data/dataset1.csv", sep=";")
+df = pd.read_csv("../../data/dataset1.csv", sep=";")
 
 print("\n" + "=" * 60)
 print("DATASET 1 - BANK MARKETING")
