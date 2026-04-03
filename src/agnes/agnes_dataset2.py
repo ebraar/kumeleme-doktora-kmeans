@@ -69,7 +69,7 @@ for k in range(2, 7):
 
 
 # 6. FINAL MODEL (sonra karar veririz)
-final_k = 5
+final_k = 6
 
 agnes = AgglomerativeClustering(n_clusters=final_k, linkage="ward")
 labels = agnes.fit_predict(data)
