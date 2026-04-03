@@ -111,18 +111,42 @@ kumeleme-doktora-kmeans/
 ├── results/
 │   ├── agnes/
 │   │   ├── dataset1/
+│   │   │   ├── dendrogram-agnes-dataset1.png
+│   │   │   └── pca-agnes-dataset1.png
+│   │   │
 │   │   ├── dataset2/
+│   │   │   ├── dendrogram-agnes-dataset2.png
+│   │   │   └── pca-agnes-dataset2.png
+│   │   │
 │   │   └── dataset3/
+│   │       ├── dendrogram-agnes-dataset3.png
+│   │       └── pca-agnes-dataset3.png
 │   │
 │   ├── kmeans/
 │   │   ├── dataset1/
+│   │   │   ├── elbow-kmeans-dataset1.png
+│   │   │   └── pca-kmeans-dataset1.png
+│   │   │
 │   │   ├── dataset2/
+│   │   │   ├── elbow-kmeans-dataset2.png
+│   │   │   └── pca-kmeans-dataset2.png
+│   │   │
 │   │   └── dataset3/
+│   │       ├── elbow-kmeans-dataset3.png
+│   │       └── pca-kmeans-dataset3.png
 │   │
 │   └── optics/
 │       ├── dataset1/
+│       │   ├── pca-optics-dataset1.png
+│       │   └── reachability-optics-dataset1.png
+│       │
 │       ├── dataset2/
+│       │   ├── pca-optics-dataset2.png
+│       │   └── reachability-optics-dataset2.png
+│       │
 │       └── dataset3/
+│           ├── pca-optics-dataset3.png
+│           └── reachability-optics-dataset3.png
 │
 ├── src/
 │   ├── agnes/
@@ -142,6 +166,22 @@ kumeleme-doktora-kmeans/
 │
 └── README.md
 ```
+
+## 📂 Results
+
+All generated visual outputs are stored in the `results/` directory, organized by algorithm and dataset.
+
+- **K-Means**
+  - Elbow plots
+  - PCA visualizations
+
+- **AGNES**
+  - Dendrograms
+  - PCA visualizations
+
+- **OPTICS**
+  - Reachability plots
+  - PCA visualizations
 
 ---
 
