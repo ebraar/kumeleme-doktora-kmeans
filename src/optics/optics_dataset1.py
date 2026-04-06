@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import OPTICS
@@ -138,3 +139,44 @@ plt.xlabel("Principal Component 1")
 plt.ylabel("Principal Component 2")
 plt.grid(True)
 plt.show()
+
+output_dir = "../../results/optics/dataset1"
+os.makedirs(output_dir, exist_ok=True)
+
+summary_path = os.path.join(output_dir, "summary-optics-dataset1.txt")
+
+with open(summary_path, "w", encoding="utf-8") as f:
+    f.write("DATASET 1 - BANK MARKETING (OPTICS)\n")
+    f.write("=" * 60 + "\n\n")
+
+    f.write("KULLANILAN PARAMETRELER\n")
+    f.write("min_samples: 10\n")
+    f.write("xi: 0.05\n")
+    f.write("min_cluster_size: 0.05\n")
+    f.write(f"use_duration: {use_duration}\n\n")
+
+    f.write("OPTICS SONUCLARI\n")
+    f.write(f"Bulunan cluster etiketleri: {np.unique(labels)}\n")
+    f.write(f"Cluster sayisi (noise haric): {len(set(labels)) - (1 if -1 in labels else 0)}\n")
+    f.write(f"Noise sayisi: {np.sum(labels == -1)}\n\n")
+
+    f.write("DEGERLENDIRME METRIKLERI\n")
+    if len(set(labels[mask])) > 1:
+        f.write(f"Silhouette Score: {round(sil, 4)}\n")
+        f.write(f"Davies-Bouldin Index: {round(db, 4)}\n\n")
+    else:
+        f.write("Yeterli sayida cluster bulunamadigi icin metrik hesaplanamadi.\n\n")
+
+    f.write("CLUSTER DAGILIMI\n")
+    f.write(df_result["cluster"].value_counts().sort_index().to_string())
+    f.write("\n\n")
+
+    f.write("CLUSTER BAZLI ORTALAMALAR\n")
+    filtered = df_result[df_result["cluster"] != -1]
+    if len(filtered) > 0:
+        f.write(filtered.groupby("cluster").mean().to_string())
+        f.write("\n")
+    else:
+        f.write("Cluster bulunamadi.\n")
+
+print(f"\nOzet dosyasi kaydedildi: {summary_path}")

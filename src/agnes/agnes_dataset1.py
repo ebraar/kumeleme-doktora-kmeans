@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 import matplotlib.pyplot as plt
 
 from sklearn.preprocessing import StandardScaler
@@ -133,3 +134,31 @@ plt.xlabel("Principal Component 1")
 plt.ylabel("Principal Component 2")
 plt.grid(True)
 plt.show()
+
+output_dir = "../../results/agnes/dataset1"
+os.makedirs(output_dir, exist_ok=True)
+
+summary_path = os.path.join(output_dir, "summary-agnes-dataset1.txt")
+
+with open(summary_path, "w", encoding="utf-8") as f:
+    f.write("DATASET 1 - BANK MARKETING (AGNES)\n")
+    f.write("=" * 60 + "\n\n")
+
+    f.write("KULLANILAN PARAMETRELER\n")
+    f.write(f"linkage: ward\n")
+    f.write(f"final_k: {final_k}\n")
+    f.write(f"use_duration: {use_duration}\n\n")
+
+    f.write("FINAL SONUCLAR\n")
+    f.write(f"Silhouette Score: {round(sil, 4)}\n")
+    f.write(f"Davies-Bouldin Index: {round(db, 4)}\n\n")
+
+    f.write("CLUSTER DAGILIMI\n")
+    f.write(df_result["cluster"].value_counts().sort_index().to_string())
+    f.write("\n\n")
+
+    f.write("CLUSTER BAZLI ORTALAMALAR\n")
+    f.write(cluster_means.to_string())
+    f.write("\n")
+
+print(f"\nOzet dosyasi kaydedildi: {summary_path}")
