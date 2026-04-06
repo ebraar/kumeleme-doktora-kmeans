@@ -1,0 +1,27 @@
+DATASET 2 - MALL CUSTOMERS (K-MEANS)
+============================================================
+
+KULLANILAN PARAMETRELER
+final_k: 5
+random_state: 42
+
+FINAL SONUCLAR
+Silhouette Score: 0.4166
+Davies-Bouldin Index: 0.8746
+
+CLUSTER DAGILIMI
+cluster
+0    20
+1    54
+2    40
+3    39
+4    47
+
+CLUSTER BAZLI ORTALAMALAR
+               Age  Annual Income (k$)  Spending Score (1-100)
+cluster                                                       
+0        46.250000           26.750000               18.350000
+1        25.185185           41.092593               62.240741
+2        32.875000           86.100000               81.525000
+3        39.871795           86.102564               19.358974
+4        55.638298           54.382979               48.851064

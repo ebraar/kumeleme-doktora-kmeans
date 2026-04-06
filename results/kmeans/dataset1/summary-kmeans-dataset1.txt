@@ -1,0 +1,6 @@
+DATASET 1 - BANK MARKETING (K-MEANS)
+============================================================
+
+KULLANILAN PARAMETRELER
+final_k: 5
+random_state: 42

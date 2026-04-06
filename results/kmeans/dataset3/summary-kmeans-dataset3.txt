@@ -1,0 +1,23 @@
+DATASET 3 - WHOLESALE CUSTOMERS (K-MEANS)
+============================================================
+
+KULLANILAN PARAMETRELER
+final_k: 3
+random_state: 42
+
+FINAL SONUCLAR
+Silhouette Score: 0.5483
+Davies-Bouldin Index: 0.9279
+
+CLUSTER DAGILIMI
+cluster
+0     45
+1    393
+2      2
+
+CLUSTER BAZLI ORTALAMALAR
+                Fresh          Milk       Grocery        Frozen  Detergents_Paper    Delicassen
+cluster                                                                                        
+0        10440.933333  19386.422222  28656.088889   2190.244444      13327.800000   2374.200000
+1        12062.913486   4115.099237   5534.966921   2940.676845       1696.170483   1299.114504
+2        34782.000000  30367.000000  16898.000000  48701.500000        755.500000  26776.000000

@@ -1,0 +1,21 @@
+DATASET 3 - WHOLESALE CUSTOMERS (AGNES)
+============================================================
+
+KULLANILAN PARAMETRELER
+linkage: ward
+final_k: 2
+
+FINAL SONUCLAR
+Silhouette Score: 0.7925
+Davies-Bouldin Index: 0.9086
+
+CLUSTER DAGILIMI
+cluster
+0    434
+1      6
+
+CLUSTER BAZLI ORTALAMALAR
+                Fresh          Milk       Grocery       Frozen  Detergents_Paper    Delicassen
+cluster                                                                                       
+0        11786.334101   5274.433180   7306.523041  2999.852535       2575.453917   1404.276498
+1        27477.000000  43542.166667  54588.500000  8285.666667      25018.333333  10247.833333

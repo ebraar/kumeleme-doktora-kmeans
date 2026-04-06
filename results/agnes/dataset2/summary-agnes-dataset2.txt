@@ -1,0 +1,29 @@
+DATASET 2 - MALL CUSTOMERS (AGNES)
+============================================================
+
+KULLANILAN PARAMETRELER
+linkage: ward
+final_k: 6
+
+FINAL SONUCLAR
+Silhouette Score: 0.4201
+Davies-Bouldin Index: 0.8521
+
+CLUSTER DAGILIMI
+cluster
+0    45
+1    45
+2    39
+3    28
+4    22
+5    21
+
+CLUSTER BAZLI ORTALAMALAR
+               Age  Annual Income (k$)  Spending Score (1-100)
+cluster                                                       
+0        27.377778           57.511111               45.844444
+1        56.400000           55.288889               48.355556
+2        32.692308           86.538462               82.128205
+3        43.892857           91.285714               16.678571
+4        44.318182           25.772727               20.272727
+5        24.809524           25.619048               80.238095

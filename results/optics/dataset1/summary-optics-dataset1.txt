@@ -1,0 +1,39 @@
+DATASET 1 - BANK MARKETING (OPTICS)
+============================================================
+
+KULLANILAN PARAMETRELER
+min_samples: 10
+xi: 0.05
+min_cluster_size: 0.05
+use_duration: True
+
+OPTICS SONUCLARI
+Bulunan cluster etiketleri: [-1  0  1  2  3  4  5  6]
+Cluster sayisi (noise haric): 7
+Noise sayisi: 594
+
+DEGERLENDIRME METRIKLERI
+Silhouette Score: 0.2856
+Davies-Bouldin Index: 1.5812
+
+CLUSTER DAGILIMI
+cluster
+-1    594
+ 0    103
+ 1    292
+ 2    106
+ 3    234
+ 4    182
+ 5    320
+ 6    169
+
+CLUSTER BAZLI ORTALAMALAR
+               age    duration  campaign  pdays  previous  emp.var.rate  cons.price.idx  cons.conf.idx  euribor3m  nr.employed
+cluster                                                                                                                       
+0        37.970874  263.388350  2.048544  999.0       1.0     -1.874757       92.945466     -46.068932   1.326427  5097.543689
+1        38.147260  211.143836  2.280822  999.0       0.0     -1.800000       92.945966     -46.614384   1.342685  5099.100000
+2        40.311321  157.566038  1.660377  999.0       0.0     -0.100000       93.200000     -42.000000   4.125066  5195.800000
+3        38.209402  200.081197  2.042735  999.0       0.0      1.400000       93.918000     -42.700000   4.961462  5228.100000
+4        39.653846  185.445055  2.153846  999.0       0.0      1.400000       94.465000     -41.800000   4.929055  5228.100000
+5        40.387500  231.081250  1.871875  999.0       0.0      1.100000       93.994000     -36.400000   4.857547  5191.000000
+6        41.183432  144.816568  1.798817  999.0       0.0      1.400000       93.444000     -36.100000   4.965006  5228.100000

@@ -1,0 +1,36 @@
+DATASET 2 - MALL CUSTOMERS (OPTICS)
+============================================================
+
+KULLANILAN PARAMETRELER
+min_samples: 5
+xi: 0.05
+min_cluster_size: 0.05
+
+OPTICS SONUCLARI
+Bulunan cluster etiketleri: [-1  0  1  2  3  4  5]
+Cluster sayisi (noise haric): 6
+Noise sayisi: 108
+
+DEGERLENDIRME METRIKLERI
+Silhouette Score: 0.6071
+Davies-Bouldin Index: 0.5257
+
+CLUSTER DAGILIMI
+cluster
+-1    108
+ 0     14
+ 1     11
+ 2     19
+ 3     18
+ 4     12
+ 5     18
+
+CLUSTER BAZLI ORTALAMALAR
+               Age  Annual Income (k$)  Spending Score (1-100)
+cluster                                                       
+0        48.928571           59.714286               47.642857
+1        64.545455           49.454545               50.181818
+2        21.526316           58.473684               51.315789
+3        23.388889           25.666667               78.611111
+4        45.666667           82.833333               15.083333
+5        31.666667           77.111111               82.444444
