@@ -2,5 +2,23 @@ DATASET 1 - BANK MARKETING (K-MEANS)
 ============================================================
 
 KULLANILAN PARAMETRELER
-final_k: 5
+final_k: 3
 random_state: 42
+use_duration: True
+
+FINAL SONUCLAR
+Silhouette Score: 0.439
+Davies-Bouldin Index: 1.0159
+
+CLUSTER DAGILIMI
+cluster
+0    12003
+1    27645
+2     1540
+
+CLUSTER BAZLI ORTALAMALAR
+               age    duration  campaign       pdays  previous  emp.var.rate  cons.price.idx  cons.conf.idx  euribor3m  nr.employed
+cluster                                                                                                                            
+0        39.393318  263.639840  2.124802  999.000000  0.317921     -2.025594       92.986577     -43.189461   1.202373  5077.975115
+1        40.192838  252.392512  2.800940  999.000000  0.025249      1.117819       93.843861     -39.456763   4.818496  5213.419671
+2        41.910390  322.326623  1.829870   22.134416  1.694805     -2.088442       93.352634     -38.334935   0.983318  5028.540909
